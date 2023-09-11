@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("Rzl82JFKy4IeXyuzR");
+        })();
+    </script>
 
 </head>
 <body>
@@ -340,23 +346,22 @@
             <img src="5ad74ce37c383.jpg" alt="">
         </div>
 
-        <form action="">
+        <div class="form">
+                <div class="inputBox">
+                    <input type="text" placeholder="Name" id="name" required>
+                    <input type="email" placeholder="Email" id="email" required>
+                </div>
 
-            <div class="inputBox">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
+                <div class="inputBox">
+                    <input type="number" placeholder="Number" id="number" required>
+                    <input type="text" placeholder="Food Name" id="foodName" required>
+                </div>
+
+                <textarea placeholder="Address" name="" cols="30" rows="10" id="address" required></textarea>
+
+                <!-- <input type="submit" value="order now" > -->
+                <button onclick="SendMail()" class="btn">Order Now</button>
             </div>
-
-            <div class="inputBox">
-                <input type="number" placeholder="Number">
-                <input type="text" placeholder="Food Name">
-            </div>
-
-            <textarea placeholder="Address" name="" id="" cols="30" rows="10"></textarea>
-
-            <input type="submit" value="order now" class="btn">
-
-        </form>
 
     </div>
 
